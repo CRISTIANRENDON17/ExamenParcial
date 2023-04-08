@@ -1,0 +1,20 @@
+.container{
+    width: 100%;
+    display: flex; /*hace que los objetos sea flexibles*/
+    justify-content: space-around; /* les da espacio entre los objetos*/
+}
+
+.titulo{
+    color: red;
+}
+
+.button{
+    background-color: #000000;
+    color: azure;
+    border-radius: 20%;
+    margin: 1rem;
+}
+
+.button:hover{
+    color: red;
+}
