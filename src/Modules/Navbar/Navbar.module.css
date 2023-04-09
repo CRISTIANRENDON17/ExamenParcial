@@ -2,15 +2,16 @@
     width: 100%;
     display: flex; /*hace que los objetos sea flexibles*/
     justify-content: space-around; /* les da espacio entre los objetos*/
+    background-color: #131e29;
 }
 
 .titulo{
-    color: red;
+    color: #fff
 }
 
 .button{
+    color: #fff;
     background-color: #131e29;
-    color: azure;
     margin: 1rem;
 }
 

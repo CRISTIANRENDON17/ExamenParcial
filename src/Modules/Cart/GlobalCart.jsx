@@ -13,13 +13,13 @@ const GlobalCart = () => {
 				<div>
 					<Cart Objeto={Objetos('1u')} />
 				</div>
-                <div>
+				<div>
 					<Cart Objeto={Objetos('2u')} />
 				</div>
-                <div>
+				<div>
 					<Cart Objeto={Objetos('3u')} />
 				</div>
-                <div>
+				<div>
 					<Cart Objeto={Objetos('4u')} />
 				</div>
 			</div>
