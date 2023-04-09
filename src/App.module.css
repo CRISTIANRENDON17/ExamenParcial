@@ -8,8 +8,14 @@
     width: 100%;
 }
 
-.CartGlobal{
+.GlobalCartTrue{
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.GlobalCartFalse{
+    display: none;
 }
 
 .Footer{

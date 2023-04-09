@@ -1,4 +1,29 @@
 .container{
-    width: 100%;
+    width: 500px;
     display: flex; /*hace que los objetos sea flexibles*/
+}
+
+.Img{
+    width: 200px;
+    height: 200px;
+    border: 2px solid red;
+    margin: 2rem;
+}
+
+.button{
+    background-color: #131e29;
+    color: azure;
+    width: 200px;
+    text-align: center;
+}
+
+.button:hover{
+    color: red;
+}
+
+.Info{
+    margin-top: 3rem; 
+}
+.Info H3{
+    text-align: left;
 }
