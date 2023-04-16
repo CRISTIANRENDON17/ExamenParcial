@@ -4,9 +4,12 @@ import './styles/index.css';
 import GlobalCart from './Modules/Cart/GlobalCart.jsx';
 import Footer from './Modules/Footer/Footer.jsx';
 import { useState } from 'react';
+import ShoppingCart from './Modules/ShoppingCart/ShoppingCart.jsx';
+import Data from './Modules/DataBase/Data.js';
 function App() {
 	const [Vista, setVista] = useState(true);
-
+	const [Producto, setProducto] = useState(Data);
+	console.log(Producto);
 	return (
 		<div className={Style.container}>
 			<div className={Style.Navbar}>
@@ -18,8 +21,16 @@ function App() {
 					Vista === true ? Style.GlobalCartTrue : Style.GlobalCartFalse
 				}
 			>
-				<GlobalCart />
+				<GlobalCart Producto={Producto} setProducto={setProducto} />
 			</div>
+			<div
+				className={
+					Vista === false ? Style.GlobalCartTrue : Style.GlobalCartFalse
+				}
+			>
+				<ShoppingCart Producto = {Producto} />
+			</div>
+
 			<div className={Style.Footer}>
 				<Footer />
 			</div>

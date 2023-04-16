@@ -1,4 +1,22 @@
 import Cart from './Cart.jsx';
+import Style from './GlobalCart.module.css';
+const GlobalCart = ( {Producto, setProducto} ) => {
+	return (
+		<div className={Style.Container}>
+			{Producto.map((Objeto) => (
+				// eslint-disable-next-line react/jsx-key
+				<div>
+					<Cart Objeto = {Objeto} Producto = {Producto} setProducto = {setProducto} />
+				</div>
+			))}
+		</div>
+	);
+};
+
+export default GlobalCart;
+
+/**
+import Cart from './Cart.jsx';
 import Data from '../DataBase/Data.js';
 import Style from './GlobalCart.module.css';
 const GlobalCart = () => {
@@ -28,3 +46,4 @@ const GlobalCart = () => {
 };
 
 export default GlobalCart;
+*/

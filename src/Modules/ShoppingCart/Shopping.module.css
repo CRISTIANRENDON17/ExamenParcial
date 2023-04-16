@@ -1,0 +1,28 @@
+.container{
+    width: 100%;
+    display: flex; /*hace que los objetos sea flexibles*/
+    background-color: aqua;
+    align-items: center;
+}
+
+.Img{
+    width: 200px;
+    height: 200px;
+    border: 2px solid red;
+    margin: 2rem;
+    
+}
+
+.Info{
+    margin-top: 3rem; 
+}
+.Info H3{
+    text-align: left;
+}
+
+.InputNumber{
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}

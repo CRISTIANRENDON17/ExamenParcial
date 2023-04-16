@@ -1,6 +1,15 @@
 import Style from './Cart.module.css';
 
-const Cart = ({ Objeto }) => {
+const Cart = ({ Objeto, Producto, setProducto }) => {
+	const Add = () =>{
+		const aux = Producto.slice();
+		aux.forEach((elemento) => {
+			if (elemento.Id === Objeto.Id) {
+			  elemento.Estado = true;
+			}
+		  });
+		setProducto(aux);
+	}
 	return (
 		<div className={Style.container}>
 			<div>
@@ -16,7 +25,10 @@ const Cart = ({ Objeto }) => {
 					<h3>${Objeto.Precio}</h3>
 				</div>
 				<div>
-					<button className={Style.button}>
+					<button
+						className={Style.button}
+						onClick={Add}
+					>
 						<h4>
 							<span>Add To Cart</span>
 						</h4>
