@@ -1,7 +1,7 @@
 import Shopping from "./Shopping";
 import Style from "./ShoppingCart.module.css"
 
-const ShoppingCart = ({ Producto }) => {
+const ShoppingCart = ({ Producto, setProducto }) => {
 	return(
         <div className={Style.container}>    
             <h1 className={Style.titulo}>Shopping Cart</h1>  
@@ -14,7 +14,7 @@ const ShoppingCart = ({ Producto }) => {
                     return(
                         // eslint-disable-next-line react/jsx-key
                         <div>
-                            <Shopping Objeto = {Objeto}/>
+                            <Shopping Objeto = {Objeto} Producto = {Producto} setProducto = {setProducto} />
                         </div>
                     )
                 }

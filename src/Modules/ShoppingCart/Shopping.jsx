@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Style from './Shopping.module.css';
 
-const Shopping = ({ Objeto }) => {
+const Shopping = ({ Objeto, Producto, setProducto }) => {
 	const [Value, setValue] = useState(1);
     const handleChange = (event) => {
         const newValue = parseInt(event.target.value, 10);
@@ -11,6 +11,13 @@ const Shopping = ({ Objeto }) => {
         else if(newValue > Objeto.Cantidad_Disponible){
             setValue(Objeto.Cantidad_Disponible);
         }else{
+            const aux = Producto.slice();
+            aux.forEach((elemento) => {
+                if (elemento.Id === Objeto.Id) {
+                  elemento.Cantidad_Seleccionada = newValue;
+                }
+              });
+            setProducto(aux);
             setValue(newValue);
         }
         
@@ -30,7 +37,7 @@ const Shopping = ({ Objeto }) => {
 					<h3>${Objeto.Precio}</h3>
 				</div>
 				<div>
-					<h3>Descripcion: {Objeto.Descripcion}</h3>
+					<h3>Description: {Objeto.Descripcion}</h3>
 				</div>
 			</div>
 			<div>

@@ -21,3 +21,14 @@
 .Footer{
     width: 100%;
 }
+
+.ContainerShoppingAndSummary{
+    width: 100%;
+    display: flex;
+}
+.Shopping{
+    width: 64%;
+}
+.Summary{
+    width: 35%;
+}

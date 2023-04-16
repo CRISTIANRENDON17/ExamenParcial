@@ -1,14 +1,24 @@
+import { useState } from 'react';
 import Style from './Cart.module.css';
 
 const Cart = ({ Objeto, Producto, setProducto }) => {
+	const [Value, setValue] = useState('Add To Cart');
 	const Add = () =>{
 		const aux = Producto.slice();
-		aux.forEach((elemento) => {
-			if (elemento.Id === Objeto.Id) {
-			  elemento.Estado = true;
-			}
-		  });
-		setProducto(aux);
+			aux.forEach((elemento) => {
+				if (elemento.Id === Objeto.Id) {
+					if(Value === 'Add To Cart'){
+						elemento.Estado = true;
+						elemento.Cantidad_Seleccionada = 1;
+						setValue('Added');
+					}else if(Value === 'Added'){
+						elemento.Estado = false;
+						elemento.Cantidad_Seleccionada = 0;
+						setValue('Add To Cart');
+					}
+				}
+			  });
+			  setProducto(aux);
 	}
 	return (
 		<div className={Style.container}>
@@ -30,7 +40,7 @@ const Cart = ({ Objeto, Producto, setProducto }) => {
 						onClick={Add}
 					>
 						<h4>
-							<span>Add To Cart</span>
+							<span>{Value}</span>
 						</h4>
 					</button>
 				</div>

@@ -1,7 +1,8 @@
 import Style from './Navbar.module.css';
 import { AiOutlineShoppingCart } from '@react-icons/all-files/ai/AiOutlineShoppingCart';
 
-const Navbar = ({ Vista, setVista }) => {
+const Navbar = ({ Vista, setVista, CantidadProducto }) => {
+
 	return (
 		<div className={Style.container}>
 			<h1 className={Style.titulo}>Taller 1</h1>
@@ -12,7 +13,7 @@ const Navbar = ({ Vista, setVista }) => {
 				}}
 			>
 				<h3>
-					<AiOutlineShoppingCart /> 0 Products
+					<AiOutlineShoppingCart /> {CantidadProducto} Products
 				</h3>
 			</button>
 		</div>

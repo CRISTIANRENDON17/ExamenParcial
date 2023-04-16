@@ -1,8 +1,8 @@
 .container{
     width: 100%;
     display: flex; /*hace que los objetos sea flexibles*/
-    background-color: aqua;
     align-items: center;
+    justify-content: center;
 }
 
 .Img{
@@ -10,7 +10,6 @@
     height: 200px;
     border: 2px solid red;
     margin: 2rem;
-    
 }
 
 .Info{

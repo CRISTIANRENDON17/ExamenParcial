@@ -1,6 +1,6 @@
 .container{
     width: 100%;
-    background-color: aquamarine;
+    justify-content: center;
 }
 
 .titulo{

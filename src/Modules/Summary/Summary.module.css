@@ -1,0 +1,17 @@
+.Container{
+    justify-content: center;
+    width: 100%; 
+}
+
+.InputNumber{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Title{
+    text-align: center;
+}
+
+.FacturaInfo h3{
+    text-align: start;
+}
