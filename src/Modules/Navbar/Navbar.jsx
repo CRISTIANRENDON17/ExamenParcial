@@ -1,7 +1,18 @@
 import Style from './Navbar.module.css';
 import { AiOutlineShoppingCart } from '@react-icons/all-files/ai/AiOutlineShoppingCart';
+import { useState, useEffect } from 'react';
 
-const Navbar = ({ Vista, setVista, CantidadProducto }) => {
+const Navbar = ({ Vista, setVista, Producto }) => {
+	const [CantidadProducto, setCantidadProducto] = useState(0);
+	useEffect(()=>{
+		let sum = 0;
+		for(let i = 0; i < Producto.length ; i++){
+		  if(Producto[i].Estado === true){
+			sum = sum + 1;
+		  }
+		}
+		setCantidadProducto(sum);
+	},[Producto])
 
 	return (
 		<div className={Style.container}>

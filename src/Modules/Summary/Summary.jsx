@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Style from './Summary.module.css'
 
-const Summary = ({CantidadProducto, Producto}) =>{
+const Summary = ({Producto}) =>{
 
     const [Total, setTotal] = useState(0);
     const [Value, setValue] = useState(0);
@@ -13,7 +13,7 @@ const Summary = ({CantidadProducto, Producto}) =>{
             }
         });
         setTotal(sum);
-    },[CantidadProducto,Producto])
+    },[Producto])
 
     const handleChange = (event) => {
         const valorInput = parseInt(event.target.value, 10);
